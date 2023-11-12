@@ -31,4 +31,3 @@ Prioritizing security, the application includes procedures for handling controll
 This project is an open-source simulation designed for educational and demonstration purposes. It serves as a mock-up to showcase the potential of digital solutions in healthcare management. Contributors are welcome to participate in its development, with the opportunity to fork, modify, and improve the application.
 
 AngelSeaMedTrack exemplifies a collaborative effort to create a versatile and adaptable tool for medication management in a simulated environment, encouraging community engagement and collective enhancement.
-# AngelSeaProject
