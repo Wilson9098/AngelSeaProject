@@ -1,10 +1,10 @@
-# AngelSeaMedTrack
+# AngleseaMedTrack
 
 [![Video Tutorial](https://img.youtube.com/vi/jeaaJKMugb0/0.jpg)](https://www.youtube.com/watch?v=jeaaJKMugb0)
 
 ## Description
 
-AngelSeaMedTrack is a comprehensive, user-friendly medication management application designed for healthcare professionals, particularly nurses. By streamlining the process of medication inventory management, it ensures accuracy and efficiency in healthcare settings.
+AngleseaMedTrack is a comprehensive, user-friendly medication management application designed for healthcare professionals, particularly nurses. By streamlining the process of medication inventory management, it ensures accuracy and efficiency in healthcare settings.
 
 ## Key Features
 
@@ -30,4 +30,4 @@ Prioritizing security, the application includes procedures for handling controll
 
 This project is an open-source simulation designed for educational and demonstration purposes. It serves as a mock-up to showcase the potential of digital solutions in healthcare management. Contributors are welcome to participate in its development, with the opportunity to fork, modify, and improve the application.
 
-AngelSeaMedTrack exemplifies a collaborative effort to create a versatile and adaptable tool for medication management in a simulated environment, encouraging community engagement and collective enhancement.
+AngleseaMedTrack exemplifies a collaborative effort to create a versatile and adaptable tool for medication management in a simulated environment, encouraging community engagement and collective enhancement.
