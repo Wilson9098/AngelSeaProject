@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#009688"
+    android:padding="32dp"
+    android:name=".PrivacyPolicyActivity">
+
+
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/disclaimerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="DISCLAIMER"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="342dp"
+        android:layout_height="1.5dp"
+        android:background="#000000"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Description TextView -->
+    <TextView
+        android:id="@+id/disclaimerDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="6dp"
+        android:text="The Drug Expiry Checking app is a prototype version designed for nurses at Anglesea Hospital. This app is intended to demonstrate the potential of a mobile automation system to support nurses and staff at Anglesea Hospital. It should be noted that the prototype does not accurately reflect the actual workflow processes in place. As systems evolve, older versions of the app may become obsolete. Anglesea Hospital and Wintec | Te Pukenga cannot be held responsible for any outdated information displayed on the app. By accepting the usage of the app, you acknowledge and understand these conditions."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/underline" />
+
+    <!-- Accept Button -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

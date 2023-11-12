@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="filter_options">
+        <item>All Pending Drugs</item>
+        <item>Expired Drugs</item>
+        <item>Soon To Expire Drugs</item>
+    </string-array>
+</resources>

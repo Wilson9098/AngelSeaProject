@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AngelSeaProject"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.user.SplashScreenActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme"> <!-- 应用我们创建的全屏主题 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- 如果您的应用使用导航图，保持下面的标签 -->
+            <nav-graph android:value="@navigation/mobile_navigation" />
+        </activity>
+
+        <activity
+            android:name=".ui.user.loginPage"
+            android:exported="true"
+            android:theme="@style/LoginPageTheme" />
+
+        <activity android:name=".ui.user.RegistrationFragment">
+        </activity>
+
+        <activity android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/LoginPageTheme">
+        </activity>
+
+        <activity android:name=".ui.user.OperationFragment">
+        </activity>
+
+        <activity android:name=".ui.home.HomeFragment">
+        </activity>
+
+        <activity android:name=".ui.user.AdminLoginPage">
+        </activity>
+
+        <activity android:name=".ui.user.SettingsPage">
+        </activity>
+
+        <activity android:name=".ui.user.ChangePassword">
+        </activity>
+
+        <activity android:name=".ui.user.EditProfile">
+        </activity>
+
+        <activity android:name=".ui.user.TeamInfo">
+        </activity>
+
+        <activity android:name=".ui.user.ForgotPage"
+            android:exported="true"
+            android:theme="@style/LoginPageTheme">
+        </activity>
+
+        <activity android:name=".ui.dashboard.AddDrugFragment">
+        </activity>
+
+        <activity android:name=".ui.user.PrivacyPolicyActivity">
+        </activity>
+
+        <activity android:name=".ui.user.TermsOfServiceActivity">
+        </activity>
+    </application>
+
+</manifest>

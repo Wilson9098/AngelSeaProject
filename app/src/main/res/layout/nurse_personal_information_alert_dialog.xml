@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+<ImageView
+    android:id="@+id/nursePhoto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="15dp"
+    android:src="@drawable/nurse_default_photo"
+    android:layout_centerHorizontal="true"/>
+
+<TextView
+    android:id="@+id/nurseFullName"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:text="Lily Brown"
+    android:layout_below="@id/nursePhoto"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:textColor="#009688"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/nurseRegNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/nurseFullName"
+        android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/registrationNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reg. Number: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/registrationNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABC1234"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nursePhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/nurseRegNumber"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone_green"/>
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="+64 028 8417 0199"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nurseEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/nursePhoneNumber"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_email_green"/>
+
+        <TextView
+            android:id="@+id/emailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="lily.brown@anglesea.co.nz"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="23dp"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:backgroundTint="#009688"
+        app:strokeColor="#009688"
+        app:strokeWidth="1dp"
+        app:cornerRadius="25dp"
+        android:textStyle="bold"
+        android:layout_below="@id/nurseEmailAddress"
+        android:layout_centerHorizontal="true"
+        app:rippleColor="#e8f3f1"/>
+
+</RelativeLayout>
+

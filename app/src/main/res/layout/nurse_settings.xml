@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    tools:contents=".ui.user.SettingsPage">
+
+    <ImageView
+        android:id="@+id/defaultImageView"
+        android:layout_width="200dp"
+        android:layout_height="160dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Ko ta maatau arotahi ko nga taangata, he atawhai me te tautoko hauora tino kounga."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:paddingLeft="38dp"
+        android:paddingRight="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defaultImageView" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/editProfileCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:rippleColor="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/btn_editProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="35dp">
+
+    <ImageView
+        android:id="@+id/editProfileIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_person_green"/>
+
+    <TextView
+        android:id="@+id/editProfileText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginStart="18dp" />
+
+    <ImageView
+        android:id="@+id/editProfileArrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_navigate_next_green"/>
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/firstBottomLine01"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="#e8f3f1"
+        app:layout_constraintTop_toBottomOf="@id/editProfileCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/changePasswordCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editProfileCard"
+        app:rippleColor="#FFFFFF">
+    <LinearLayout
+        android:id="@+id/btn_changePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/iv_changePassword"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_lock_green"/>
+
+        <TextView
+            android:id="@+id/changePasswordText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Change Password"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginStart="18dp" />
+
+        <ImageView
+            android:id="@+id/changePasswordArrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_navigate_next_green"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/firstBottomLine02"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="#e8f3f1"
+        app:layout_constraintTop_toBottomOf="@id/changePasswordCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appDevelopmentTeamCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changePasswordCard"
+        app:rippleColor="#FFFFFF">
+        <LinearLayout
+            android:id="@+id/teamInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/appDevelopmentTeam"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_groups_green"/>
+
+            <TextView
+                android:id="@+id/appDevelopmentTeamText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="App Development Team"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginStart="18dp" />
+
+            <ImageView
+                android:id="@+id/appDevelopmentTeamArrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_navigate_next_green"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/firstBottomLine03"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="#e8f3f1"
+        app:layout_constraintTop_toBottomOf="@id/appDevelopmentTeamCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/logoutCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appDevelopmentTeamCard"
+        app:rippleColor="#FFFFFF">
+        <LinearLayout
+            android:id="@+id/setting_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_logout_green"/>
+
+            <TextView
+                android:id="@+id/logoutText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Logout"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginStart="18dp" />
+
+            <ImageView
+                android:id="@+id/logoutArrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_navigate_next_green"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/firstBottomLine04"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="#e8f3f1"
+        app:layout_constraintTop_toBottomOf="@id/logoutCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

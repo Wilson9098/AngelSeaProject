@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742098396495",
+    "project_id": "angelseaproject",
+    "storage_bucket": "angelseaproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742098396495:android:03c108b671a8e80dec113a",
+        "android_client_info": {
+          "package_name": "com.example.angelseaproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyWyVyPjA5Pqp6JcDFFcPYA_jpY_Dn0wA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

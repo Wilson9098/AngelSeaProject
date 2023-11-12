@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.angelseaproject.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_adminLoginPage"
+            app:destination="@id/adminLoginPage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.angelseaproject.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_addDrugFragment"
+            app:destination="@id/addDrugFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.angelseaproject.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.example.angelseaproject.ui.user.loginPage"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.angelseaproject.ui.user.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/forgotPage"
+        android:name="com.example.angelseaproject.ui.user.ForgotPage"
+        android:label="fragment_forgot"
+        tools:layout="@layout/fragment_forgot" />
+    <fragment
+        android:id="@+id/addDrugFragment"
+        android:name="com.example.angelseaproject.ui.dashboard.AddDrugFragment"
+        android:label="Add New Drug"
+        tools:layout="@layout/fragment_adddrug">
+        <action
+            android:id="@+id/action_addDrugFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminLoginPage"
+        android:name="com.example.angelseaproject.ui.user.AdminLoginPage"
+        android:label="admin_authenticate"
+        tools:layout="@layout/admin_authenticate" >
+        <action
+            android:id="@+id/action_adminLoginPage_to_operationFragment"
+            app:destination="@id/operationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/operationFragment"
+        android:name="com.example.angelseaproject.ui.user.OperationFragment"
+        android:label="fragment_allOperationsHistory"
+        tools:layout="@layout/fragment_allOperationsHistory" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.angelseaproject.ui.user.SettingsPage"
+        android:label="SettingsPage" >
+        <action
+            android:id="@+id/action_navigation_settings_to_loginPage"
+            app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_navigation_settings_to_teamInfo"
+            app:destination="@id/teamInfo" />
+        <action
+            android:id="@+id/action_navigation_settings_to_changePassword"
+            app:destination="@id/changePassword" />
+        <action
+            android:id="@+id/action_navigation_settings_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamInfo"
+        android:name="com.example.angelseaproject.ui.user.TeamInfo"
+        android:label="app_development_team"
+        tools:layout="@layout/app_development_team" />
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.example.angelseaproject.ui.user.ChangePassword"
+        android:label="ChangePassword" />
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.angelseaproject.ui.user.EditProfile"
+        android:label="settings_edit_profile"
+        tools:layout="@layout/settings_edit_profile" />
+</navigation>

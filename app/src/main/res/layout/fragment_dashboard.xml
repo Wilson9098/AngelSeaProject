@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <View
+        android:id="@+id/topHorizontalLine"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#009688"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/drugManagementLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drug List Management"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/topHorizontalLine"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/drugsIcon"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_drug_green"
+        app:layout_constraintTop_toBottomOf="@id/drugManagementLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/drugsFilterInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toBottomOf="@id/drugManagementLabel">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="Search Drug..."
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="22dp"
+        android:textColor="#888888"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/drugsIcon"
+        app:layout_constraintTop_toBottomOf="@+id/drugManagementLabel"
+        android:background="@null" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchCameraButton"
+        android:layout_width="36dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="4.5dp"
+        app:backgroundTint="#e8f3f1"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_camera_green"
+        app:iconSize="26dp"
+        app:iconTint="#009688"
+        app:layout_constraintStart_toEndOf="@id/searchBar"
+        app:layout_constraintTop_toBottomOf="@id/drugManagementLabel"
+        app:rippleColor="#FFFFFF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchDrug"
+        android:layout_width="36dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="5dp"
+        android:paddingLeft="4.5dp"
+        app:backgroundTint="#e8f3f1"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_search_green"
+        app:iconSize="26dp"
+        app:iconTint="#009688"
+        app:layout_constraintStart_toEndOf="@id/searchCameraButton"
+        app:layout_constraintTop_toBottomOf="@id/drugManagementLabel"
+        app:rippleColor="#FFFFFF" />
+
+
+    <View
+        android:id="@+id/sortDrugsBottomLine"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#009688"
+        app:layout_constraintTop_toBottomOf="@id/drugsIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RecyclerView for checking drug expiry -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drugListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sortDrugsBottomLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/operationButtons"
+         />
+
+    <LinearLayout
+        android:id="@+id/operationButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addDrugButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="4.5dp"
+            android:text="Add new drug"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:backgroundTint="#e8f3f1"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_add_box_green"
+            app:iconPadding="0dp"
+            app:iconSize="26dp"
+            app:iconTint="#009688"
+            app:rippleColor="#25E739" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

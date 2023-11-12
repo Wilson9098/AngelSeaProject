@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+<!--    <TextView-->
+<!--        android:id="@+id/operation_drug_name"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="4dp"-->
+
+<!--        android:text="Drug:"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/operation_drug_expire_date"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/operation_drug_expire_date"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="4dp"-->
+<!--        android:text="Expire Date:"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/operation_drug_name"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/operation_date"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="4dp"-->
+<!--        android:text="Operation Date:"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/operation_content"-->
+<!--        tools:layout_editor_absoluteX="0dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/operation_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="4dp"-->
+<!--        android:text="Operation:"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/operation_drug_name" />-->
+
+    <ImageView
+        android:id="@+id/tagIconRed"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_tag_red"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tagIconOrange"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_tag_orange"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/drugTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controlled"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/drugLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Drugs:"
+        android:textColor="#009688"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/drugTypeLabel" />
+
+    <TextView
+        android:id="@+id/drugIdAndName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A001 Codeine......"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tagIconRed"
+        app:layout_constraintTop_toBottomOf="@id/drugTypeLabel" />
+
+    <TextView
+        android:id="@+id/operationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Operation: "
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drugIdAndName" />
+
+    <!-- Operation Value -->
+    <TextView
+        android:id="@+id/operationValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apply red stickers to controlled drugs nearing expiration and clearly mark the expiration date with a bold marker."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operationLabel" />
+
+    <TextView
+        android:id="@+id/checkDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Date: "
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operationValue" />
+
+    <!-- Check Date Value -->
+    <TextView
+        android:id="@+id/checkDateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sunday, 29 Oct, 2023"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/checkDateLabel"
+        app:layout_constraintTop_toBottomOf="@id/operationValue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
