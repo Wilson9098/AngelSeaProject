@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_navigation_home_to_adminLoginPage"
             app:destination="@id/adminLoginPage" />
+
     </fragment>
 
     <fragment

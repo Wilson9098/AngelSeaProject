@@ -102,9 +102,9 @@ class OperationFragment : Fragment(R.layout.all_nurse_history) {
                         if (position > 0) {
                             selected = useList[position].firstName.toString()
 //                            Log.d("test3", selected)
+                        } else {
+                            selected = "ALL"
                         }
-                    } else {
-                        selected = "ALL"
                     }
                 }
                 // 可以在这里根据选中的项进行操作
@@ -129,7 +129,9 @@ class OperationFragment : Fragment(R.layout.all_nurse_history) {
 
 
         // set start date
+        startDateCalendar.time = Calendar.getInstance().time
         startDateCalendar.add(Calendar.DATE, -7)
+        startDateCalendar.stripTime()
         binding.historyStartDateButton.setOnClickListener {
             DatePickerDialog(
                 requireContext(),
@@ -145,6 +147,7 @@ class OperationFragment : Fragment(R.layout.all_nurse_history) {
         }
         // set end date
         endDateCalendar.time = Calendar.getInstance().time
+        endDateCalendar.stripTime()
         binding.historyEndDateButton.setOnClickListener {
             DatePickerDialog(
                 requireContext(),
@@ -165,8 +168,8 @@ class OperationFragment : Fragment(R.layout.all_nurse_history) {
             recyclerViewAllOperations.itemAnimator = null
             recyclerViewAllOperations.adapter = adapter_rv
             operationNurseFilterSpinner.adapter = adapter_spinner
-            historyEndDateValue.text = "-/-/-"
-            historyStartDateValue.text = "-/-/-"
+            historyEndDateValue.text = dateFormat.format(endDateCalendar.time)
+            historyStartDateValue.text = dateFormat.format(startDateCalendar.time)
         }
 
         // creating page with searching
@@ -180,6 +183,7 @@ class OperationFragment : Fragment(R.layout.all_nurse_history) {
                 if (snapshot.exists()) {
                     LoaclData.allOperations.clear()
                     for (item in snapshot.children) {
+                        Log.d(name, name)
                         if (name == "ALL" || item.key.toString() == name) {
                             for (data in item.children) {
                                 val operationData = data.getValue(Operation::class.java)
@@ -228,13 +232,18 @@ class OperationFragment : Fragment(R.layout.all_nurse_history) {
     }
 
     private fun reset(spinner: Spinner, start: Calendar, end: Calendar) {
+        startDateCalendar.time = Calendar.getInstance().time
+        startDateCalendar.add(Calendar.DATE, -7)
+        startDateCalendar.stripTime()
+        endDateCalendar.time = Calendar.getInstance().time
+        endDateCalendar.stripTime()
+
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy")
+        binding.historyEndDateValue.text = dateFormat.format(endDateCalendar.time)
+        binding.historyStartDateValue.text = dateFormat.format(startDateCalendar.time)
+
         spinner.setSelection(0)
         searchByName("ALL", start, end)
-
-        startDateCalendar = Calendar.getInstance()
-        endDateCalendar = Calendar.getInstance()
-        binding.historyEndDateValue.text = "-/-/-"
-        binding.historyStartDateValue.text = "-/-/-"
     }
 
     private fun Calendar.stripTime(): Calendar = apply {
