@@ -47,7 +47,7 @@
         android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/registrationNumberValue"
+        android:id="@+id/tv_RegNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ABC1234"

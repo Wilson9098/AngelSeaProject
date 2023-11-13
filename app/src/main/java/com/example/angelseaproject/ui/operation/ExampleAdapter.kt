@@ -77,6 +77,7 @@ class ExampleAdapter(
         val passwordView = dialog.findViewById<TextView>(R.id.yourPassword)
         dialog.findViewById<TextView>(R.id.nurseFullName).text =
             user.firstName + " " + user.lastName
+        dialog.findViewById<TextView>(R.id.tv_RegNum).text = user.NHI
 
         val returnBtn = dialog.findViewById<MaterialButton>(R.id.backButton)
         returnBtn.setOnClickListener {
